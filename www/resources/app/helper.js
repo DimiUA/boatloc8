@@ -562,7 +562,7 @@ Protocol = {
             });           
              
                 
-            var map = L.map(option.target, { zoomControl: false, center: option.latLng, zoom: option.zoom, layers: [googleStreets, layerSeaMark, layerGrid2] }); 
+            var map = L.map(option.target, { zoomControl: false, center: option.latLng, zoom: option.zoom, layers: [googleStreets, layerGrid2, layerSeaMark] }); 
                             
             var layers = {
                 "<span class='mapSwitcherWrapper googleSwitcherWrapper'><img class='layer-icon' src='resources/images/googleRoad.png' alt='' /> <p>Map</p></span>": googleStreets,
@@ -686,8 +686,7 @@ Protocol = {
                             asset.posInfo.launchHours = asset.posInfo.Engine;
                         }  
                         ret.engineHours.value = TimeSpan(parseInt(asset.posInfo.launchHours)*1000 + parseInt(asset.InitAcconHours)*60*60*1000 + parseInt(asset._FIELD_FLOAT8)*1000).format("^hh:mm:ss");  
-                        //console.log(asset);
-
+                        
                     }
                     if(asset.haveFeature("Acc")){
                         ret.acc = {};

@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>106187216531-tqa82vmf4t3db8viepu0ud7n6a2nibc7.apps.googleusercontent.com</string>
+	<string>106187216531-it5a9bkc16jvqjpsco5j0vb0u9a1r59k.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.106187216531-tqa82vmf4t3db8viepu0ud7n6a2nibc7</string>
+	<string>com.googleusercontent.apps.106187216531-it5a9bkc16jvqjpsco5j0vb0u9a1r59k</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBDxtHG5bNZkgGnCTdXHiwhEnu6X53VM90</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.sinopacific.boatloc8</string>
+	<string>com.quiktrak.boatloc8</string>
 	<key>PROJECT_ID</key>
 	<string>gps-installer</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:106187216531:ios:202811661e0319ac</string>
+	<string>1:106187216531:ios:3bdc977bf07dbff9</string>
 	<key>DATABASE_URL</key>
 	<string>https://gps-installer.firebaseio.com</string>
 </dict>
