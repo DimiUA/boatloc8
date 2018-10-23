@@ -2882,11 +2882,7 @@ function updateSupportUrl(){
     }
     var href = API_URL.URL_SUPPORT.format(param.name,param.loginName,param.email,param.phone,param.service); 
     //console.log(href);
-    if (typeof navigator !== "undefined" && navigator.app) {                
-            navigator.app.loadUrl(href, {openExternal: true}); 
-        } else {
-            window.open(href,'_blank');
-        }
+    $$('#menuSupport').attr('href',href);
 }
 
 function checkBalance(alert){
