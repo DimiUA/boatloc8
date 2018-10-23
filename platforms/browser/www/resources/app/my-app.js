@@ -639,26 +639,42 @@ App.onPageInit('notification', function(page){
 	                            '</li>';
 	                    break; 
 
-	                case 'Location':
-	                	ret = '<li class="swipeout" data-id="'+item.listIndex+'" data-alarm="'+item.alarm+'" data-lat="'+item.Lat+'" data-lng="'+item.Lng+'"  >' +                        
-	                                '<div class="swipeout-content item-content">' +
-	                                    '<div class="item-inner">' +
-	                                        '<div class="item-title-row">' +
-	                                            '<div class="item-title color-gray">'+item.alarm+'</div>' +
-	                                            '<div class="item-after">'+item.PositionTime+'</div>' +
-	                                        '</div>' +
-	                                        '<div class="item-subtitle">'+item.AssetName +'</div>' +                                        
-	                                    '</div>' +
-	                                '</div>' +                      
-	                                '<div class="swipeout-actions-left">' +                             
-	                                    '<a href="#" class="swipeout-delete swipeout-overswipe" data-confirm="'+LANGUAGE.PROMPT_MSG010+'" data-confirm-title="'+LANGUAGE.PROMPT_MSG014+'" data-close-on-cancel="true"><i class="f7-icons icon-header-delete"</i></a>' +
-	                                '</div>' +
-	                            '</li>';
-	                break;
+	                default:
 
-	                default:                	      	
-	                   
-	                    if (typeof item.speed === "undefined") {
+                        ret = '<li class="swipeout" data-id="'+item.listIndex+'" data-alarm="'+item.alarm+'" data-lat="'+item.Lat+'" data-lng="'+item.Lng+'"  >' +                        
+                                    '<div class="swipeout-content item-content">' +
+                                        '<div class="item-inner">' +
+                                            '<div class="item-title-row">' +
+                                                '<div class="item-title">'+item.AssetName+'</div>' +
+                                                '<div class="item-after">'+item.PositionTime+'</div>' +
+                                            '</div>' +
+                                            '<div class="item-subtitle">'+item.alarm +'</div>' +                                        
+                                        '</div>' +
+                                    '</div>' +                      
+                                    '<div class="swipeout-actions-left">' +                             
+                                        '<a href="#" class="swipeout-delete swipeout-overswipe" data-confirm="'+LANGUAGE.PROMPT_MSG010+'" data-confirm-title="'+LANGUAGE.PROMPT_MSG014+'" data-close-on-cancel="true"><i class="f7-icons icon-header-delete"</i></a>' +
+                                    '</div>' +
+                                '</li>';
+                    /*case 'Location':
+                        ret = '<li class="swipeout" data-id="'+item.listIndex+'" data-alarm="'+item.alarm+'" data-lat="'+item.Lat+'" data-lng="'+item.Lng+'"  >' +                        
+                                    '<div class="swipeout-content item-content">' +
+                                        '<div class="item-inner">' +
+                                            '<div class="item-title-row">' +
+                                                '<div class="item-title">'+item.AssetName+'</div>' +
+                                                '<div class="item-after">'+item.PositionTime+'</div>' +
+                                            '</div>' +
+                                            '<div class="item-subtitle">'+item.alarm +'</div>' +                                        
+                                        '</div>' +
+                                    '</div>' +                      
+                                    '<div class="swipeout-actions-left">' +                             
+                                        '<a href="#" class="swipeout-delete swipeout-overswipe" data-confirm="'+LANGUAGE.PROMPT_MSG010+'" data-confirm-title="'+LANGUAGE.PROMPT_MSG014+'" data-close-on-cancel="true"><i class="f7-icons icon-header-delete"</i></a>' +
+                                    '</div>' +
+                                '</li>';
+                    break;
+
+                    default:                            
+                       
+                        if (typeof item.speed === "undefined") {
                             item.speed = 0;
                         }
                         if (typeof item.direct === "undefined") {
@@ -669,20 +685,20 @@ App.onPageInit('notification', function(page){
                         }
                         
                 
-		                ret = '<li class="swipeout" data-id="'+item.listIndex+'" data-title="'+item.title+'" data-type="'+item.type+'" data-imei="'+item.imei+'" data-name="'+item.name+'" data-lat="'+item.lat+'" data-lng="'+item.lng+'" data-time="'+item.time+'" data-speed="'+item.speed+'" data-direct="'+item.direct+'" data-mileage="'+item.mileage+'">' +                        
-		                            '<div class="swipeout-content item-content">' +
-		                                '<div class="item-inner">' +
-		                                    '<div class="item-title-row">' +
-		                                        '<div class="item-title color-gray">'+item.title+'</div>' +
-		                                        '<div class="item-after">'+item.time+'</div>' +
-		                                    '</div>' +
-		                                    '<div class="item-subtitle">'+item.name+'</div>' +                                        
-		                                '</div>' +
-		                            '</div>' +                      
-		                            '<div class="swipeout-actions-left">' +                             
-		                                '<a href="#" class="swipeout-delete swipeout-overswipe" data-confirm="'+LANGUAGE.PROMPT_MSG010+'" data-confirm-title="'+LANGUAGE.PROMPT_MSG014+'" data-close-on-cancel="true"><i class="f7-icons icon-header-delete"</i></a>' +
-		                            '</div>' +		                           
-		                        '</li>';
+                        ret = '<li class="swipeout" data-id="'+item.listIndex+'" data-title="'+item.title+'" data-type="'+item.type+'" data-imei="'+item.imei+'" data-name="'+item.name+'" data-lat="'+item.lat+'" data-lng="'+item.lng+'" data-time="'+item.time+'" data-speed="'+item.speed+'" data-direct="'+item.direct+'" data-mileage="'+item.mileage+'">' +                        
+                                    '<div class="swipeout-content item-content">' +
+                                        '<div class="item-inner">' +
+                                            '<div class="item-title-row">' +
+                                                '<div class="item-title">'+item.name+'</div>' +
+                                                '<div class="item-after">'+item.time+'</div>' +
+                                            '</div>' +
+                                            '<div class="item-subtitle">'+item.title+'</div>' +                                        
+                                        '</div>' +
+                                    '</div>' +                      
+                                    '<div class="swipeout-actions-left">' +                             
+                                        '<a href="#" class="swipeout-delete swipeout-overswipe" data-confirm="'+LANGUAGE.PROMPT_MSG010+'" data-confirm-title="'+LANGUAGE.PROMPT_MSG014+'" data-close-on-cancel="true"><i class="f7-icons icon-header-delete"</i></a>' +
+                                    '</div>' +                                 
+                                '</li>';*/
 	            }
             } 
 	            
@@ -814,14 +830,19 @@ App.onPageInit('asset', function (page) {
     });
 
     loadPageTrackingInterval.on('click', function(){      
+        var countryCode = getUserinfo().UserInfo.CountryCode; 
+        var trackingIntervalDetails = getTrackingIntervalDetailByCountyCode(countryCode); 
+        var data = {
+            Name: asset.Name,
+            IMEI: asset.IMEI,
+            Cost: trackingIntervalDetails.cost,
+            PayLink: trackingIntervalDetails.payLink,
+            PayPlanCode: trackingIntervalDetails.payPlanCode, 
+        };
         
         mainView.router.load({
             url:'resources/templates/asset.tracking.interval.html',
-            context:{
-                Name: asset.Name,
-                IMEI: asset.IMEI,
-                /*IMSI: asset.IMSI,*/
-            }
+            context: data
         });
     });
 
@@ -1039,6 +1060,7 @@ App.onPageInit('asset.tracking.interval', function (page) {
     var rangeInput = $$(page.container).find('input[name="rangeInput"]');
     var trackingPeriod = $$(page.container).find('input[name="tracking-period"]');
     var assetImeiInput = $$(page.container).find('input[name=trackingIntervalImei]').val();
+     var countryCode = getUserinfo().UserInfo.CountryCode;
     var params = {
     	trackingIntervalEl: $$(page.container).find('.trackingInterval'),
 	    trackingCostEl: $$(page.container).find('.trackingCost'),
@@ -1048,6 +1070,20 @@ App.onPageInit('asset.tracking.interval', function (page) {
 	    assetImei: assetImeiInput ? assetImeiInput : TargetAsset.IMEI,
     };
 
+    switch (countryCode){
+        case 'AUS':
+            params.countryCode = countryCode;
+            break;
+        default:
+            params.countryCode = 'OTHER';
+    }
+   
+    if (upgradeNowButton.data('paylink') && upgradeNowButton.data('payplancode')) {
+        upgradeNowButton.removeClass('disabled');
+    }else{
+        upgradeNowButton.addClass('disabled');
+    } 
+    
     rangeInput.on('change input', function(){      
         params.value = $$(this).val();
         updateTrackingHint(params);
@@ -1075,10 +1111,10 @@ App.onPageInit('asset.tracking.interval', function (page) {
                 if (result.MajorCode == '000') { 
                     if (paylink) {
                         if (typeof navigator !== "undefined" && navigator.app) {                
-            navigator.app.loadUrl(href, {openExternal: true}); 
-        } else {
-            window.open(href,'_blank');
-        }
+                            navigator.app.loadUrl(paylink, {openExternal: true}); 
+                        } else {
+                            window.open(paylink,'_blank');
+                        }
                         setTimeout(function(){
                             App.modal({                
                                 text: LANGUAGE.PROMPT_MSG030, //LANGUAGE.PROMPT_MSG017
@@ -2848,19 +2884,35 @@ function getNewAssetInfo(params){
 function updateTrackingHint(params){        
     var trackingPeriodElVal = $$('body').find('[name="tracking-period"]:checked').val();  
     
-    if (parseInt(params.value)  === 0) {
-    	params.upgradeNowButtonEl.addClass('disabled');
+    if (parseInt(Protocol.TrackingInterval[params.value][trackingPeriodElVal][params.countryCode].cost) === 0) {
+        params.upgradeNowButtonEl.addClass('disabled');
     }else{
-    	params.upgradeNowButtonEl.removeClass('disabled');
+        params.upgradeNowButtonEl.removeClass('disabled');
     }   
     params.bottomIndicator.removeClass('color-dealer');
     $$('.bottom-indicator-'+params.value).addClass('color-dealer');
 
     params.trackingIntervalEl.html(Protocol.TrackingInterval[params.value].intervalDisplayed);
-    params.trackingCostEl.html(Protocol.TrackingInterval[params.value][trackingPeriodElVal].cost);
-    params.upgradeNowButtonEl.data('paylink',Protocol.TrackingInterval[params.value][trackingPeriodElVal].button+'&on0=imei&os0='+params.assetImei+'&on1=dn&os1='+AppDetails.code+'&on2=appname&os2='+AppDetails.name);
-    params.upgradeNowButtonEl.data('payplancode',Protocol.TrackingInterval[params.value][trackingPeriodElVal].payPlanCode);
+    params.trackingCostEl.html(Protocol.TrackingInterval[params.value][trackingPeriodElVal][params.countryCode].cost);
+    params.upgradeNowButtonEl.data('paylink',Protocol.TrackingInterval[params.value][trackingPeriodElVal][params.countryCode].button+'&on0=imei&os0='+params.assetImei+'&on1=dn&os1='+AppDetails.code+'&on2=appname&os2='+AppDetails.name);
+    params.upgradeNowButtonEl.data('payplancode',Protocol.TrackingInterval[params.value][trackingPeriodElVal][params.countryCode].payPlanCode);
 
+}
+
+function getTrackingIntervalDetailByCountyCode(countryCode){
+    var ret = {
+        cost: 0,
+        payLink: '',
+        payPlanCode: '',
+    };
+    switch(countryCode){
+        case 'AUS':
+            ret.cost = Protocol.TrackingInterval[0][1][countryCode].cost;
+            ret.payLink = Protocol.TrackingInterval[0][1][countryCode].button;
+            ret.payPlanCode = Protocol.TrackingInterval[0][1][countryCode].payPlanCode;
+            break;
+    }
+    return ret;
 }
 
 
@@ -2929,9 +2981,18 @@ function updateMarkerPositionTrack(data){
                 data.routeButton.attr('href',API_ROUTE+latlng.lat+','+latlng.lng);
             }*/
 
+            if (data.routeButton) {                
+                data.routeButton.data('lat',latlng.lat);
+                data.routeButton.data('lng',latlng.lng);
+            }
+
             if (data.panoButton) {
                 data.panoButton.data('lat',latlng.lat);
                 data.panoButton.data('lng',latlng.lng);
+            }
+
+            if (data.posLatlng) {
+               data.posLatlng.html('GPS: ' + Protocol.Helper.convertDMS(latlng.lat, latlng.lng));             
             }
            
             Protocol.Helper.getAddressByGeocoder(latlng,function(address){
