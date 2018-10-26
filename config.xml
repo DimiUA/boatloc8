@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.sinopacific.boatloc8" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="17" ios-CFBundleVersion="17">
+<!-- 
+Android com.sinopacific.boatloc8
+IOS com.quiktrak.boatloc8
+ -->
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.quiktrak.boatloc8" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="18" ios-CFBundleVersion="18">
     <name>BoatLoc8</name>
     <description>
         BoatLoc8 is a world leading boat location system providing protection
